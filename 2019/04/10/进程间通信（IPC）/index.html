@@ -87,15 +87,19 @@
 
 
 
-<meta name="description" content="HAHA&apos;s Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HAHA">
-<meta property="og:url" content="http://nullopp.github.io/archives/2019/03/index.html">
+<meta name="description" content="首先说一下为什么要有进程间通信，众所周知，Linux系统依靠众多的进程来进行工作，每个进程各自拥有各自的用户地址空间，并且一个进程的全局变量在另外一个进程是无法直接访问的，所以进程间需要数据交换时必须要通过系统内核，在内核中分配一块缓冲区域，进程A把数据从用户空间copy到内核缓冲区，进程B再从内和缓冲区把数据读走，内核提供的这种机制就是进程间通信，简称IPC。
+然后再分析下进程间通信主要有哪些方">
+<meta property="og:type" content="article">
+<meta property="og:title" content="进程间通信（IPC）">
+<meta property="og:url" content="http://nullopp.github.io/2019/04/10/进程间通信（IPC）/index.html">
 <meta property="og:site_name" content="HAHA">
-<meta property="og:description" content="HAHA&apos;s Blog">
+<meta property="og:description" content="首先说一下为什么要有进程间通信，众所周知，Linux系统依靠众多的进程来进行工作，每个进程各自拥有各自的用户地址空间，并且一个进程的全局变量在另外一个进程是无法直接访问的，所以进程间需要数据交换时必须要通过系统内核，在内核中分配一块缓冲区域，进程A把数据从用户空间copy到内核缓冲区，进程B再从内和缓冲区把数据读走，内核提供的这种机制就是进程间通信，简称IPC。
+然后再分析下进程间通信主要有哪些方">
+<meta property="og:updated_time" content="2019-05-05T02:59:52.444Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HAHA">
-<meta name="twitter:description" content="HAHA&apos;s Blog">
+<meta name="twitter:title" content="进程间通信（IPC）">
+<meta name="twitter:description" content="首先说一下为什么要有进程间通信，众所周知，Linux系统依靠众多的进程来进行工作，每个进程各自拥有各自的用户地址空间，并且一个进程的全局变量在另外一个进程是无法直接访问的，所以进程间需要数据交换时必须要通过系统内核，在内核中分配一块缓冲区域，进程A把数据从用户空间copy到内核缓冲区，进程B再从内和缓冲区把数据读走，内核提供的这种机制就是进程间通信，简称IPC。
+然后再分析下进程间通信主要有哪些方">
 
 
 
@@ -123,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://nullopp.github.io/archives/2019/03/"/>
+  <link rel="canonical" href="http://nullopp.github.io/2019/04/10/进程间通信（IPC）/"/>
 
 
 
 
 
-  <title> 归档 | HAHA </title>
+  <title> 进程间通信（IPC） | HAHA </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -164,7 +168,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -278,66 +282,193 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 8 篇日志。 继续努力。
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://nullopp.github.io/2019/04/10/进程间通信（IPC）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HAHA">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                进程间通信（IPC）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-10T10:59:57+08:00">
+                2019-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/10/进程间通信（IPC）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2019/04/10/进程间通信（IPC）/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/04/10/进程间通信（IPC）/" class="leancloud_visitors" data-flag-title="进程间通信（IPC）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
+
+      
+        <p>首先说一下为什么要有进程间通信，众所周知，Linux系统依靠众多的进程来进行工作，每个进程各自拥有各自的用户地址空间，并且一个进程的全局变量在另外一个进程是无法直接访问的，所以进程间需要数据交换时必须要通过系统内核，在内核中分配一块缓冲区域，进程A把数据从用户空间copy到内核缓冲区，进程B再从内和缓冲区把数据读走，内核提供的这种机制就是进程间通信，简称IPC。</p>
+<p>然后再分析下进程间通信主要有哪些方式，并且分别有哪些利弊。Linux下的IPC方式基本上都是从Unix平台继承而来，贝尔实验室和BSD在对Unix早期的IPC进行改进时侧重点不同，前者对原有系统进行了改进和扩充，形成了<code>System V IPC</code>,通信进程则局限在单个计算机中，后者则跳过限制，形成了基于<code>socket</code>的IPC机制。而Linux则把二者都继承了。所以Linux下的IPC方式主要有以下几种：</p>
+<ol>
+<li>管道（也称匿名管道）及有名管道<ul>
+<li>管道是半双工的，数据只能单向流动，如果双方需要互相通信则需要建立起两个管道。</li>
+<li>管道进行写数据时必须确定另一端有某一进程，如果写入的数据超过缓冲区限制，则写操作将阻塞，如果管道中没有数据，读操作将阻塞，如果管道发现另一端断开则自动退出，有名管道则可以以读写模式打开，当前进程读，当前进程写，不会阻塞。</li>
+<li>匿名管道只能在具有亲缘关系的进程进行，有名管道则可以通过提供路径名克服这个问题。</li>
+<li>进程只能以先进先出的方式从管道中存取数据，管道一段的进程顺序的将数据写入缓冲区，另一端则顺序的读取数据，无法定位存取</li>
+<li>管道传送的是无格式的字节流，需要管道两端必须实现约定好数据格式</li>
+</ul>
+</li>
+<li>信号 </li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
       
 
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2019">2019</h2>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/06/序列化/" rel="next" title="序列化">
+                <i class="fa fa-chevron-left"></i> 序列化
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/29/Android四大组件之Service/" rel="prev" title="Android四大组件之Service">
+                Android四大组件之Service <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
         </div>
       
-      
 
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/06/序列化/" itemprop="url">
-              
-                <span itemprop="name">序列化</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-03-06T17:13:34+08:00"
-              content="2019-03-06" >
-          03-06
-        </time>
-      </div>
-
-    </header>
+      
+    </footer>
   </article>
 
 
 
-    
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
 
-  </section>
-
-  
-
+      
+    </div>
+  </div>
 
           
           </div>
@@ -345,6 +476,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2019/04/10/进程间通信（IPC）/"
+           data-title="进程间通信（IPC）" data-url="http://nullopp.github.io/2019/04/10/进程间通信（IPC）/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -521,11 +660,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
 
 
   
